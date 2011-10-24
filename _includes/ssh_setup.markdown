@@ -143,6 +143,12 @@
 			<pre class="terminal bootcamp">
 			<span class="codeline">$ ssh -vT git@github.com<span>Prints debug info for the git@github.com SSH connection</span></span>
 			</pre>
+                        <p>If you have more than one SSH key, you may need to edit your .ssh/config file to ensure the right one is sent to github.</p>
+                        <pre class="terminal bootcamp">
+			HOST github.com
+                            IdentityFile ~/.ssh/github_key
+                            IdentitiesOnly yes
+			</pre>
 			<p>Make sure it is connecting to GitHub on port 22. If it is, check to make sure your firewall is not blocking port 22.</p>
 			<h4>When all else fails</h4>
 			<p>If none of these solved your problem, check out <a href="/troubleshooting-ssh">this guide</a> or contact <a href="https://github.com/contact">GitHub support</a></p>
